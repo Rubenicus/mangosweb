@@ -13,7 +13,7 @@ RUN apk add gnupg openssl dovecot tini@community wget \
  && mv /tmp/mangosweb/MaNGOSWebV5-master /mangosweb \
  && rm -rf /mangosweb/config/config-protected.php /tmp/*
 
-COPY docker/docker-mangosweb/rootfs /
+COPY docker/web/rootfs /
 RUN find /mangosweb -type d -exec chmod 755 {} \; \
  && find /mangosweb -type f -exec chmod 644 {} \;
 
